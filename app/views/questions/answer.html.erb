@@ -1,0 +1,19 @@
+<h1>Stupid Coaching</h1>
+
+<div class="vl">
+  <p><%= @question %></p>
+  <p class="italic">- You</p>
+</div>
+
+<div class="vl bg">
+  <% if @question.downcase == "I am going to work".downcase %>
+    <p>"Great!"</p>
+  <% elsif @question.end_with?("?") %>
+    <p>"Silly question, get dressed and go to work!"</p>
+  <% else %>
+    <p>I don't care, get dressed and go to work!"</p>
+  <% end %>
+  <p class="italic">- Your Coach</p>
+</div>
+
+<%= link_to "Ask a new question", "/ask" %>
